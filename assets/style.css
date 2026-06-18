@@ -119,3 +119,16 @@ body.post-page {
   }
 }
 /* CIPHER_LAYOUT_GUARD_END */
+
+/* CIPHER_CONCEPT_PAIR_START */
+.concept-pair {
+  margin: 1.8rem 0;
+  padding: 1rem 1.2rem;
+  border-left: 3px solid var(--line);
+  background: rgba(0, 0, 0, 0.025);
+}
+
+.concept-pair p {
+  margin: 0.35rem 0;
+}
+/* CIPHER_CONCEPT_PAIR_END */
