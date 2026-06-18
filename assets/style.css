@@ -71,3 +71,51 @@ hr { height: 1px; margin: 2.3em 0; border: 0; background: var(--line); }
 footer { padding: 28px 0 46px; border-top: 1px solid var(--line); color: var(--faint); font-size: 0.92rem; }
 footer::after { content: "Structure first. Separate leaps."; display: block; margin-top: 8px; color: var(--muted); }
 @media (max-width: 640px) { header { padding-top: 44px; } article, .post, .post-card, section { border-radius: 14px; } }
+
+/* CIPHER_LAYOUT_GUARD_START */
+:root {
+  --content-max: 760px;
+}
+
+main,
+.site-header,
+.site-footer,
+.post-header,
+.post-main,
+.post-article,
+body.post-page > article,
+body > article {
+  width: min(var(--content-max), calc(100% - 32px));
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+body.post-page {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.post-header {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.post-article {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 600px) {
+  main,
+  .site-header,
+  .site-footer,
+  .post-header,
+  .post-main,
+  .post-article,
+  body.post-page > article,
+  body > article {
+    width: calc(100% - 24px);
+  }
+}
+/* CIPHER_LAYOUT_GUARD_END */
